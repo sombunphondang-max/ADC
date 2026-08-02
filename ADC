@@ -1,0 +1,7 @@
+-- ตัวอย่างเชิงทฤษฎีสำหรับใช้ในเกมที่ตนเองพัฒนา
+local function pointCameraAtTarget(camera, targetPosition)
+    if not camera or not targetPosition then return end
+    
+    -- กำหนดให้มุมกล้องอยู่ที่ตำแหน่งเดิม แต่หันหน้าไปทาง targetPosition
+    camera.CFrame = CFrame.lookAt(camera.CFrame.Position, targetPosition)
+end
